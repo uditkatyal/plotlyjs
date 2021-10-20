@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <body>
+    <div>
+      <p>index_name: "9f0f9f55-4691-401a-8bde-10a2ab57cbbe"</p>
+      <p>created: 1634183752</p>
+      <p>updated: 1634184444</p>
+      <p>created_date: "2021-10-14T09:25:52Z"</p>
+      <p>updated_date: "2021-10-14T09:37:24Z"</p>
+      <p>active: "1"</p>
+      <p>visualizable: "1"</p>
+      <p>catalog_uuid: "507b9267-17fd-4e87-86b6-97e29f6f751a"</p>
+      <p>source: "data.gov.in"</p>
+      <p>org_type: "Central"</p>
+
+      <p>
+        org: "Ministry of Chemicals and Fertilizers", "Department of Chemicals
+        and Petrochemicals"
+      </p>
+      <p>sector: Industries, Chemicals and Petrochemicals</p>
+    </div>
+
+    <div id="myPlot" style="width: 100%; max-width: 700px"></div>
+
+    <script>
+      var xArray = [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
+
+      var records = [
+        {
+          category: "BASIC MAJOR PETROCHIMICALS",
+          major_groups: "SYNTHETIC FIBRES \/ YARN",
+          products: "Nylon Filament Yarn (NFY)     ",
+          _2010_11_: 33.43,
+          _2011_12_: 30.39,
+          _2012_13_: 21.94,
+          _2013_14_: 24.32,
+          _2014_15_: 32.45,
+          _2015_16_: 37.25,
+          _2016_17_: 40.91,
+          _2017_18_: 40.01,
+          _2018_19_: 46.615,
+        },
+        {
+          category: "BASIC MAJOR PETROCHIMICALS",
+          major_groups: "SYNTHETIC FIBRES \/ YARN",
+          products: "Nylon Industrial Yarn (NIY)    ",
+          _2010_11_: 97.05,
+          _2011_12_: 96.64,
+          _2012_13_: 95.07,
+          _2013_14_: 103.83,
+          _2014_15_: 100.52,
+          _2015_16_: 94.87,
+          _2016_17_: 103.56,
+          _2017_18_: 107.59,
+          _2018_19_: 109.545,
+        },
+        {
+          category: "BASIC MAJOR PETROCHIMICALS",
+          major_groups: "SYNTHETIC FIBRES \/ YARN",
+          products: "Polypropylene Filament Yarn (PPFY)",
+          _2010_11_: 6.16,
+          _2011_12_: 6.97,
+          _2012_13_: 6.43,
+          _2013_14_: 5.91,
+          _2014_15_: 5.14,
+          _2015_16_: 3.47,
+          _2016_17_: 3.39,
+          _2017_18_: 3.15,
+          _2018_19_: 2.356,
+        },
+        {
+          category: "BASIC MAJOR PETROCHIMICALS",
+          major_groups: "SYNTHETIC FIBRES \/ YARN",
+          products: "Acrylic Fibre (Dry Spun) (AF)",
+          _2010_11_: 76.16,
+          _2011_12_: 76.41,
+          _2012_13_: 74.97,
+          _2013_14_: 94.38,
+          _2014_15_: 89.63,
+          _2015_16_: 105.87,
+          _2016_17_: 95.39,
+          _2017_18_: 90.97,
+          _2018_19_: 99.454,
+        },
+        {
+          category: "BASIC MAJOR PETROCHIMICALS",
+          major_groups: "SYNTHETIC FIBRES \/ YARN",
+          products: "Polyester Staple Fibre (PSF)",
+          _2010_11_: 1036.71,
+          _2011_12_: 953.22,
+          _2012_13_: 974.05,
+          _2013_14_: 1010.05,
+          _2014_15_: 1021.25,
+          _2015_16_: 1039.65,
+          _2016_17_: 1056,
+          _2017_18_: 1005.3,
+          _2018_19_: 931.44,
+        },
+        {
+          category: "BASIC MAJOR PETROCHIMICALS",
+          major_groups: "SYNTHETIC FIBRES \/ YARN",
+          products: "Polypropylene Staple Fibre (PPSF)",
+          _2010_11_: 3.74,
+          _2011_12_: 4.08,
+          _2012_13_: 8.06,
+          _2013_14_: 23.01,
+          _2014_15_: 25.42,
+          _2015_16_: 27.04,
+          _2016_17_: 24.56,
+          _2017_18_: 22.24,
+          _2018_19_: 20.744,
+        },
+        {
+          category: "BASIC MAJOR PETROCHIMICALS",
+          major_groups: "SYNTHETIC FIBRES \/ YARN",
+          products: "Polyester Staple Fibrefil (PSFF)",
+          _2010_11_: 52.72,
+          _2011_12_: 48.52,
+          _2012_13_: 51.09,
+          _2013_14_: 56.46,
+          _2014_15_: 57.3,
+          _2015_16_: 51.05,
+          _2016_17_: 53.65,
+          _2017_18_: 51.33,
+          _2018_19_: 52.993,
+        },
+        {
+          category: "BASIC MAJOR PETROCHIMICALS",
+          major_groups: "SYNTHETIC FIBRES \/ YARN",
+          products: "POLYSTER INDUSTRIAL YARN",
+          _2010_11_: 13.3,
+          _2011_12_: 14.39,
+          _2012_13_: 15.24,
+          _2013_14_: 14.75,
+          _2014_15_: 16.58,
+          _2015_16_: 15.38,
+          _2016_17_: 16.33,
+          _2017_18_: 15.04,
+          _2018_19_: 14.826,
+        },
+        {
+          category: "BASIC MAJOR PETROCHIMICALS",
+          major_groups: "POLYMERS",
+          products: "Linear Low Density Polyethylene (LLDPE)",
+          _2010_11_: 897.07,
+          _2011_12_: 1032.94,
+          _2012_13_: 1011.79,
+          _2013_14_: 1036.58,
+          _2014_15_: 910.26,
+          _2015_16_: 1204.57,
+          _2016_17_: 1318.26,
+          _2017_18_: 1290.05,
+          _2018_19_: 1581.224,
+        },
+        {
+          category: "BASIC MAJOR PETROCHIMICALS",
+          major_groups: "POLYMERS",
+          products: "High Density Polyethylene (HDPE)",
+          _2010_11_: 887.19,
+          _2011_12_: 1118.97,
+          _2012_13_: 1176.9,
+          _2013_14_: 1195.04,
+          _2014_15_: 1155.79,
+          _2015_16_: 1317.15,
+          _2016_17_: 1520.04,
+          _2017_18_: 1578.38,
+          _2018_19_: 1597.676,
+        },
+      ];
+
+      var data = [];
+
+      var xvalues = [
+        "_2010_11_",
+        "_2011_12_",
+        "_2012_13_",
+        "_2013_14_",
+        "_2014_15_",
+        "_2015_16_",
+        "_2016_17_",
+        "_2017_18_",
+        "_2018_19_",
+      ];
+
+      for (i = 0; i < records.length; i++) {
+        var yvalues = [];
+
+        for (j = 0; j < xvalues.length; j++) {
+          yvalues.push(records[i][xvalues[j]]);
+        }
+
+        data.push({
+          x: xvalues,
+          y: yvalues,
+          mode: "lines",
+        });
+      }
+
+      // Define Layout
+      var layout = {
+        xaxis: { range: ["2010_2011", "2019_2020"], title: "Years" },
+        yaxis: { range: [0, 1600], title: "Data" },
+
+        title:
+          "Production of Major Petrochemicals - Product-wise \/ Group-wise from 2010-11 to 2018-19",
+        desc: "Production of Major Petrochemicals - Product-wise \/ Group-wise from 2010-11 to 2018-19",
+      };
+
+      // Display using Plotly
+      Plotly.newPlot("myPlot", data, layout);
+    </script>
+  </body>
+</html>
